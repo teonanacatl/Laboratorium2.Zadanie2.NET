@@ -3,10 +3,38 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Laboratorium2.Zadanie2.NET"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Calculator" Height="350" Width="525">
     <Grid>
-
+        <TextBox x:Name="ResultTextBox" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="497"/>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="10,38,0,0" VerticalAlignment="Top" Width="497">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Button1" Content="1" Click="NumberButton_Click" Grid.Row="0" Grid.Column="0"/>
+            <Button x:Name="Button2" Content="2" Click="NumberButton_Click" Grid.Row="0" Grid.Column="1"/>
+            <Button x:Name="Button3" Content="3" Click="NumberButton_Click" Grid.Row="0" Grid.Column="2"/>
+            <Button x:Name="ButtonPlus" Content="+" Click="OperationButton_Click" Grid.Row="0" Grid.Column="3"/>
+            <Button x:Name="Button4" Content="4" Click="NumberButton_Click" Grid.Row="1" Grid.Column="0"/>
+            <Button x:Name="Button5" Content="5" Click="NumberButton_Click" Grid.Row="1" Grid.Column="1"/>
+            <Button x:Name="Button6" Content="6" Click="NumberButton_Click" Grid.Row="1" Grid.Column="2"/>
+            <Button x:Name="ButtonMinus" Content="-" Click="OperationButton_Click" Grid.Row="1" Grid.Column="3"/>
+            <Button x:Name="Button7" Content="7" Click="NumberButton_Click" Grid.Row="2" Grid.Column="0"/>
+            <Button x:Name="Button8" Content="8" Click="NumberButton_Click" Grid.Row="2" Grid.Column="1"/>
+            <Button x:Name="Button9" Content="9" Click="NumberButton_Click" Grid.Row="2" Grid.Column="2"/>
+            <Button x:Name="ButtonMultiply" Content="*" Click="OperationButton_Click" Grid.Row="2" Grid.Column="3"/>
+            <Button x:Name="Button0" Content="0" Click="NumberButton_Click" Grid.Row="3" Grid.Column="1"/>
+            <Button x:Name="ButtonEquals" Content="=" Click="EqualsButton_Click" Grid.Row="3" Grid.Column="2"/>
+            <Button x:Name="ButtonDivide" Content="/" Click="OperationButton_Click" Grid.Row="3" Grid.Column="3"/>
+        </Grid>
     </Grid>
 </Window>
